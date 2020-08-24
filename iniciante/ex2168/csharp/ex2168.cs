@@ -15,56 +15,63 @@ class URI
 public class Cidade
 {
     public int QuantidadeQuadras {get; private set;}
-    public List<Quadra> Quadras {get; private set;}
-
-    public Cidade()
-    {
-        Quadras = new List<Quadra>();
-    }
+    public int[,] Esquinas {get; private set;}
 
     public void LerQuantidadeQuadras()
     {
         QuantidadeQuadras = Int32.Parse(Console.ReadLine());
+        int numeroEsquinas =  NumeroEsquinas();
+        Esquinas = new int[numeroEsquinas, numeroEsquinas];
     }
 
     public void LerQuadras()
     {
-        for(int i = 0; i < QuantidadeQuadras; i++)
-            Quadras.Add(LerQuadra());
+        int numeroEsquinas =  NumeroEsquinas();
+
+        for(int i = 0; i < numeroEsquinas; i++)            
+            LerEsquina(linha: i);
     }
-    public Quadra LerQuadra()
+    
+    private void LerEsquina(int linha)
     {
-        var quadra = new Quadra(); 
-        quadra.LerQuadra();
-        return quadra;
+
+        string esquinas = Console.ReadLine();
+        for(int j = 0; j < NumeroEsquinas(); j++)
+        {
+            Esquinas[linha,j] = Int32.Parse(esquinas.Split(' ')[j]);
+        }
     }
+
     public void VerificarQuadras()
     {
-        for(int i = 0; i < QuantidadeQuadras; i++)
-            Console.Write("{0}\n", Quadras[i].SeguraToString());
+        int numeroEsquinas =  NumeroEsquinas();
+        for(int i = 0; i < numeroEsquinas - 1; i++){
+            for(int j = 0; j < numeroEsquinas - 1; j++)
+            {
+                Quadra quadra = new Quadra(Esquinas[i,j], Esquinas[i+1,j], Esquinas[i,j+1], Esquinas[i+1,j+1]);
+                Console.Write(quadra.SeguraToString());
+            }
+                Console.Write("\n");
+        }
     }
+
+    public int NumeroEsquinas() => QuantidadeQuadras + 1;
 }
 
 public class Quadra
 {
     public int[] Esquinas {get; private set;}
 
-    public Quadra()
+    public Quadra(int e1, int e2, int e3, int e4)
     {
         Esquinas = new int[4];
-    }
-    public void LerQuadra()
-    {
-        string quadra1 = Console.ReadLine();
-        string quadra2 = Console.ReadLine();
-    
-        Esquinas[0] = Int32.Parse(quadra1.Split(' ')[0]);
-        Esquinas[1] = Int32.Parse(quadra1.Split(' ')[1]);
-        Esquinas[2] = Int32.Parse(quadra2.Split(' ')[0]);
-        Esquinas[3] = Int32.Parse(quadra2.Split(' ')[1]);
+        Esquinas[0] = e1;
+        Esquinas[1] = e2;
+        Esquinas[2] = e3;
+        Esquinas[3] = e4;
     }
 
-    public bool EhSegura()
+    private bool EhSegura()
     {
         int esquinasSeguras = 0;
         
