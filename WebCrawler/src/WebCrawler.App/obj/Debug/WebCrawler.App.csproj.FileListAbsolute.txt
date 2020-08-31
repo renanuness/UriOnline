@@ -1,0 +1,10 @@
+C:\Users\renan.silva\Documents\repos\UriOnline\WebCrawler\src\WebCrawler.App\obj\Debug\WebCrawler.App.csprojAssemblyReference.cache
+C:\Users\renan.silva\Documents\repos\UriOnline\WebCrawler\src\WebCrawler.App\bin\Debug\WebCrawler.App.exe.config
+C:\Users\renan.silva\Documents\repos\UriOnline\WebCrawler\src\WebCrawler.App\bin\Debug\WebCrawler.App.exe
+C:\Users\renan.silva\Documents\repos\UriOnline\WebCrawler\src\WebCrawler.App\bin\Debug\WebCrawler.App.pdb
+C:\Users\renan.silva\Documents\repos\UriOnline\WebCrawler\src\WebCrawler.App\bin\Debug\HtmlAgilityPack.dll
+C:\Users\renan.silva\Documents\repos\UriOnline\WebCrawler\src\WebCrawler.App\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\renan.silva\Documents\repos\UriOnline\WebCrawler\src\WebCrawler.App\bin\Debug\HtmlAgilityPack.xml
+C:\Users\renan.silva\Documents\repos\UriOnline\WebCrawler\src\WebCrawler.App\obj\Debug\WebCrawler.App.csproj.CopyComplete
+C:\Users\renan.silva\Documents\repos\UriOnline\WebCrawler\src\WebCrawler.App\obj\Debug\WebCrawler.App.exe
+C:\Users\renan.silva\Documents\repos\UriOnline\WebCrawler\src\WebCrawler.App\obj\Debug\WebCrawler.App.pdb
