@@ -4,14 +4,9 @@ class URI
 {
     static void Main(string[] args)
     {
-        var M = -1;
-        var X = -1;
+        Xp xp = new Xp();
 
-        do{
-
-
-            
-        } while(M!=0 & X!=0);
+        xp.Executar();
     }
 }
 
@@ -20,14 +15,22 @@ public class Xp
     public int M {get; private set;}
     public int X {get; private set;}
     
-    public void LerValores()
+    public void Executar()
+    {
+        while(LerValores())
+        {
+            Imprimir();
+        }
+    }
+    public bool LerValores()
     {
         string entrada = Console.ReadLine();
         M = Int32.Parse(entrada.Split(' ')[0]);
         X = Int32.Parse(entrada.Split(' ')[1]);
+        return (M!=0 && X!=0);
     }
 
-    public override void ToString()
+    public void Imprimir()
     {
         Console.Write("{0}\n", M*X);
     } 
