@@ -1,0 +1,16 @@
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\ExerciseFinder.exe.config
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\ExerciseFinder.exe
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\ExerciseFinder.pdb
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\Infra.dll
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\WebCrawler.App.dll
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\HtmlAgilityPack.dll
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\Infra.pdb
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\WebCrawler.App.pdb
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\WebCrawler.App.exe.config
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\bin\Debug\HtmlAgilityPack.xml
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\obj\Debug\ExerciseFinder.csprojAssemblyReference.cache
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\obj\Debug\ExerciseFinder.csproj.CoreCompileInputs.cache
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\obj\Debug\ExerciseFinder.csproj.CopyComplete
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\obj\Debug\ExerciseFinder.exe
+C:\Users\tp.renan.silva\Documents\repos\UriOnline\WebCrawler\src\ExerciseFinder\obj\Debug\ExerciseFinder.pdb

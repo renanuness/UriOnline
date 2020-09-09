@@ -16,7 +16,7 @@ namespace WebCrawler.App
         {
             List<string> exerciciosId = new List<string>();
 
-            for ( int i = 0; i < 6; i++)
+            for ( int i = 1; i <= 6; i++)
             {
                 var url = URL.Replace("PAGENUMBER", i.ToString());
                 var html = GetPage(url).Result;

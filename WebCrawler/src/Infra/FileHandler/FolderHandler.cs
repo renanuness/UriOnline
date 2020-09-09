@@ -11,9 +11,9 @@ namespace Infra.FileHandler
         public IEnumerable<string> GetExercisesDone()
         {
             List<string> exercisesDone = new List<string>();
-            var path = @"C:\Users\renan.silva\Documents\repos\UriOnline\iniciante";
+            var path = @"C:\Users\tp.renan.silva\Documents\repos\UriOnline\iniciante";
             var directories = Directory.GetDirectories(path).Where(dir => Directory.GetDirectories(path+@"\"+dir).Contains("csharp"));
-
+            
             return directories;
         }
     }

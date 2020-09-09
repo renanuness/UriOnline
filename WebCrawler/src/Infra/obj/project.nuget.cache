@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "NirduGAdaw2h6yTfULjMEnWPlw02hChItTFLM/OC6To/jHY0v7CfMF4VRwCQe8NQuMLhJYmDWM+SCW33jl8A3g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tp.renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\Infra.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tp.renan.silva\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\tp.renan.silva\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

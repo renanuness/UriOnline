@@ -1,33 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\Infra.csproj": {}
+    "C:\\Users\\tp.renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\Infra.csproj": {}
   },
   "projects": {
-    "C:\\Users\\renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\Infra.csproj": {
+    "C:\\Users\\tp.renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\Infra.csproj",
+        "projectUniqueName": "C:\\Users\\tp.renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\Infra.csproj",
         "projectName": "Infra",
-        "projectPath": "C:\\Users\\renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\Infra.csproj",
-        "packagesPath": "C:\\Users\\renan.silva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\obj\\",
+        "projectPath": "C:\\Users\\tp.renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\Infra.csproj",
+        "packagesPath": "C:\\Users\\tp.renan.silva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tp.renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\src\\Infra\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\renan.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\tp.renan.silva\\Documents\\repos\\UriOnline\\WebCrawler\\NuGet.Config",
+          "C:\\Users\\tp.renan.silva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\renan.silva\\Documents\\repos\\ProfessionalCSharpAndDotNetCore\\Libraries\\CreateNuGet\\SampleLib\\bin\\release": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -61,7 +55,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

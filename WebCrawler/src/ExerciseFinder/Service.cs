@@ -25,9 +25,9 @@ namespace ExerciseFinder
             var exerscisesDone = _folderHandler.GetExercisesDone();
         }
 
-        private List<string> GetExercisesToDo()
-        {
+        //private List<string> GetExercisesToDo()
+        //{
 
-        }
+        //}
     }
 }
