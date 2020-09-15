@@ -10,10 +10,28 @@ namespace Infra.FileHandler
     {
         public IEnumerable<string> GetExercisesDone()
         {
+            var exercisesFolders = GetExercisesFolder();
+
+            List<string> exercises = new List<string>();
+            foreach (var exercise in exercisesFolders)
+                exercises.Add(GetExerciseName(exercise));
+
+            return exercises;
+        }
+
+        private string GetExerciseName(string exercise)
+        {
+            string[] names = exercise.Split('\\');
+
+            return names.Last().Replace("ex","");
+        }
+
+        private IEnumerable<string> GetExercisesFolder()
+        {
             List<string> exercisesDone = new List<string>();
-            var path = @"C:\Users\tp.renan.silva\Documents\repos\UriOnline\iniciante";
-            var directories = Directory.GetDirectories(path).Where(dir => Directory.GetDirectories(path+@"\"+dir).Contains("csharp"));
-            
+            var path = @"C:\Users\tp.renan.silva\Documents\repos\UriOnline\iniciante\csharp";
+            var directories = Directory.GetDirectories(path);
+
             return directories;
         }
     }

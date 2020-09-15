@@ -23,11 +23,26 @@ namespace ExerciseFinder
             var exercisesSite = await _webCrawler.StartCrawlerAsync();
 
             var exerscisesDone = _folderHandler.GetExercisesDone();
+
+            var exercisesToDo = GetExercisesToDo(exercisesSite, exerscisesDone);
+
+            foreach (var exercise in exercisesToDo)
+                Console.Write("{0}\n", exercise);
+
+            Console.ReadLine();
         }
 
-        //private List<string> GetExercisesToDo()
-        //{
+        private List<string> GetExercisesToDo(IEnumerable<string> exercisesSite, IEnumerable<string> exercisesDone)
+        {
+            List<string> exercisesToDo = new List<string>();
 
-        //}
+            foreach(var exerciseSite in exercisesSite)
+            {
+                if (!exercisesDone.Contains(exerciseSite))
+                    exercisesToDo.Add(exerciseSite);
+            }
+
+            return exercisesToDo;
+        }
     }
 }
