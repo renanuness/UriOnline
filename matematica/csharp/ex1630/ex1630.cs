@@ -22,7 +22,6 @@ class URI
             if(EhDivisorComum(ladoA, ladoB))
             {
                 resultado = CalcularLadosComMinimoDivisorComum(ladoA, ladoB, Menor(ladoA, ladoB));
-                // ImprimirResultado(resultado);
                 resultados.Add(resultado);
                 continue;
             }
@@ -31,7 +30,6 @@ class URI
             if (maximoDivisorComum != 0)
             {
                 resultado = CalcularLadosComMinimoDivisorComum(ladoA, ladoB, maximoDivisorComum);
-                // ImprimirResultado(resultado);
                 resultados.Add(resultado);
 
                 continue;
@@ -39,9 +37,7 @@ class URI
 
             resultado = CalcularDistancia(ladoA, ladoB);
 
-            // ImprimirResultado(resultado);
             resultados.Add(resultado);
-
         }
 
         foreach(var resultado in resultados)
