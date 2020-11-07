@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-//TODO: errado
+using System.Linq;
 
-class URI
+public class URI
 {
     static void Main(string[] args)
     {
@@ -16,26 +16,17 @@ class URI
             var ladoA = Int32.Parse(entradas.Split(' ')[0]);
             var ladoB = Int32.Parse(entradas.Split(' ')[1]);
 
-            
+            List<int> lados = new List<int>();
+            lados.Add(ladoA);
+            lados.Add(ladoB);
 
-            var resultado = 0;
-            if(EhDivisorComum(ladoA, ladoB))
-            {
-                resultado = CalcularLadosComMinimoDivisorComum(ladoA, ladoB, Menor(ladoA, ladoB));
-                resultados.Add(resultado);
-                continue;
-            }
+            MDC calculadorMdc = new MDC(lados);
+          
+            var mdc = ladoA == ladoB ? ladoA : calculadorMdc.Calcular();
 
-            var maximoDivisorComum = DescobreMaximoDivisorComum(ladoA, ladoB);
-            if (maximoDivisorComum != 0)
-            {
-                resultado = CalcularLadosComMinimoDivisorComum(ladoA, ladoB, maximoDivisorComum);
-                resultados.Add(resultado);
+            var perimetro = CalcularPerimetro(ladoA, ladoB);
 
-                continue;
-            }
-
-            resultado = CalcularDistancia(ladoA, ladoB);
+            var resultado = perimetro / mdc;
 
             resultados.Add(resultado);
         }
@@ -44,71 +35,106 @@ class URI
             ImprimirResultado(resultado);
     }
 
-    private static void ImprimirResultado(int resultado)
+    public static void ImprimirResultado(int resultado)
     {
         Console.Write("{0}\n", resultado);
     }
 
-    private static int CalcularLadosComMinimoDivisorComum(int ladoA, int ladoB, int maximoDivisorComum)
+    private static int CalcularPerimetro(int ladoA, int ladoB)
     {
-        var menorDistanciaA = ladoA / maximoDivisorComum;
-        var menorDistanciaB = ladoB / maximoDivisorComum;
-        return CalcularDistancia(menorDistanciaA, menorDistanciaB);
+        return ladoA * 2 + ladoB * 2;
     }
-
-    public static int CalcularDistancia(int numeroA, int numeroB)
-    {
-        return numeroA * 2 + numeroB * 2;
-    }
-
-    public static int DescobreMaximoDivisorComum(int numero1, int numero2)
-    {
-        var menor = Menor(numero1, numero2);
-        var maior = Maior(numero2, numero1);
-        var metadeDoMenor = menor / 2;
-        var i = 2;
-        var maiorDivisor= 0;
-        while(true)
-        {
-            var resto = menor % i;
-            if(resto == 0)
-            {
-                var divisor = menor / i;
-                if(EhDivisorComum(maior, menor, divisor))
-                {
-                    maiorDivisor = divisor;
-                }
-            }
-            i++;
-            if(i == metadeDoMenor)
-                break;
-        }
-        return 0;
-    }
-
-    public static bool EhDivisorComum(int numero1, int numero2, int divisor) => (numero1 % divisor == 0 && numero2 % divisor == 0);
-
-    public static bool EhDivisorComum(int numero1, int numero2)
-    {
-        var menor = Menor(numero1, numero2);
-        var maior = Maior(numero2, numero1);
-
-        if(maior % menor == 0)
-            return true;
-
-        return false;
-    }
-    public static int DescobrirMinimoDivisor(int numero)
-    {
-        var limite = numero / 2;
-        for(int i = 2; i < limite; i++)
-        {
-            if(numero % i == 0)
-                return i;
-        }
-        return 0;
-    }
-
-    public static int Menor(int numero1, int numero2) => numero1 > numero2 ? numero2 : numero1;
-    public static int Maior(int numero1, int numero2) => numero2 > numero1 ? numero2 : numero1;
 }
+
+    public class MDC
+    {
+        public List<int> Valores {get; private set;}
+        public int ValorB {get; private set;}
+
+        public MDC (List<int> valores)
+        {
+            Valores = valores;
+            Valores.Sort();
+        }
+
+        public int Calcular()
+        {
+            List<int> divisores = new List<int>();
+            var limite = 299;
+            var divisor = 2;
+
+            do{
+                if(EhDivisorComum(divisor))
+                {
+                    divisores.Add(divisor);
+                    DividirTodos(divisor);
+                }
+                else
+                {
+                    divisor++;
+                }
+
+                if(TemUm())
+                    break;
+
+            }while(divisor <= limite);
+
+            return CalcularMDC(divisores);
+        } 
+
+        private bool EhDivisorComum(int divisor)
+        {
+            foreach(var valor in Valores)
+            {   
+                if(!EhDivisor(divisor, valor))
+                    return false;
+            }
+
+            return true;
+        }
+
+        private bool EhDivisor(int divisor, int valor)
+        {
+            return valor % divisor == 0;
+        }
+
+        private void DividirTodos(int divisor)
+        {
+            for(int i = 0; i < Valores.Count; i++)
+                Valores[i] = Valores[i] / divisor;
+        }
+
+        private int CalcularMDC(List<int> valores)
+        {
+            var mdc = 1;
+            foreach(var valor in valores)
+                mdc *= valor;
+
+            return mdc;
+        }
+
+        private int ProximoDivisor(int menorValor)
+        {
+            var divisor = 2;
+            var limite = divisor / 2;
+            while(true)
+            {
+                if(menorValor % divisor == 0)
+                    return menorValor / divisor;
+                
+                divisor++;
+                if(divisor == limite)
+                    return 1;
+            }
+        }
+
+        private bool TemUm()
+        {
+            var um = Valores.FirstOrDefault(x => x == 1);
+            
+            if(um == 1)
+                return true;
+            
+            return false;
+        }
+    }
