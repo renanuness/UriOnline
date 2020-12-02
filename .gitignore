@@ -3,3 +3,10 @@
 ################################################################################
 
 /WebCrawler/.vs/WebCrawler
+
+bin/
+obj/
+.suo
+*.testlog
+*.manifest
+*.exe
