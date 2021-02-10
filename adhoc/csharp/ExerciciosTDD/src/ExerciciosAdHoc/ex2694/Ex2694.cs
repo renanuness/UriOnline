@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace ExerciciosApp.ex2694
+namespace ExerciciosAdHoc.ex2694
 {
     public class URI
     {
@@ -12,7 +12,7 @@ namespace ExerciciosApp.ex2694
             var ex = new Ex2694();
             int casosDeTeste = int.Parse(ex.LerLinha());
 
-            for(int i = 0; i < casosDeTeste; i++)
+            for (int i = 0; i < casosDeTeste; i++)
             {
                 var entrada = ex.LerLinha();
                 var numeros = ex.ExtrairNumeros(entrada);
@@ -20,7 +20,7 @@ namespace ExerciciosApp.ex2694
             }
         }
     }
-    
+
     public class Ex2694
     {
         public static int MAX_CASOS_TESTE = 100000;
@@ -46,8 +46,8 @@ namespace ExerciciosApp.ex2694
             List<int> numeros = new List<int>();
             foreach (var valor in result)
             {
-                int numero = 0; 
-                if(int.TryParse(valor, out numero))
+                int numero = 0;
+                if (int.TryParse(valor, out numero))
                 {
                     numeros.Add(numero);
                 }

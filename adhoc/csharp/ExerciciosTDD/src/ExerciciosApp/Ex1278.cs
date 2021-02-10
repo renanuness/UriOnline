@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace ExerciciosApp.ex1278
+namespace ExerciciosAdHoc.ex1278
 {
     public static class URI
     {

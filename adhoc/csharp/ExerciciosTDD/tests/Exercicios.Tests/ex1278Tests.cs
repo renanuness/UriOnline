@@ -1,7 +1,5 @@
-﻿using ExerciciosApp.ex1278;
-using System;
+﻿using ExerciciosAdHoc.ex1278;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace Exercicios.Tests
@@ -25,9 +23,9 @@ namespace Exercicios.Tests
 
             // Act 
             var result = ex.RemoverEspacos(linhas);
-        
+
             // Assert
-            foreach(var linha in result)
+            foreach (var linha in result)
             {
                 var contains = linha.Contains("  ");
                 Assert.False(contains);

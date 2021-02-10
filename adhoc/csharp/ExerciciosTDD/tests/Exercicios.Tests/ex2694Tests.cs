@@ -1,6 +1,5 @@
-﻿using ExerciciosApp.ex2694;
+﻿using ExerciciosAdHoc.ex2694;
 using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
 namespace Exercicios.Tests
@@ -22,7 +21,7 @@ namespace Exercicios.Tests
             var valorValido = Ex2694.MAX_CASOS_TESTE - 1;
 
             // Act
-            var result =_ex2964.ValidarCasosDeTeste(valorValido);
+            var result = _ex2964.ValidarCasosDeTeste(valorValido);
 
             // Assert
             Assert.True(result);
