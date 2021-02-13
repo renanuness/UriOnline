@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>ExerciciosStrings.Exercicio1873.URI</StartupObject>
+    <StartupObject>ExerciciosStrings.Exercicio1868.URI</StartupObject>
   </PropertyGroup>
 
 </Project>
