@@ -1,26 +1,35 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace ExerciciosMatematica.ex1585
+namespace ExerciciosIniciante.Exercicio2523
 {
-    public class URI
+    public static class URI
     {
         static void Main(string[] args)
         {
-            var ex = new Ex1585();
+            var ex = new Ex2523();
             ex.Executar();
         }
     }
 
-    public class Ex1585
+    public class Ex2523
     {
         public void Executar()
         {
-            var casos = LerInteiro();
-            while(casos-- > 0)
+            var letras = "";
+            while (!string.IsNullOrWhiteSpace(letras = LerLinha()))
             {
-                var entradas = LerMultiplasEntradas(2);
-                var resultado = (entradas[0] * entradas[1]) / 2;
-                Console.Write("{0} cm2\n", resultado);
+                var tamanhoDaMensagem = LerInteiro();
+                var mensagem = LerMultiplasEntradas(tamanhoDaMensagem);
+
+                var mensagemDecodificada = new StringBuilder();
+                for(int i = 0; i < tamanhoDaMensagem; i++)
+                {
+                    var l = mensagem[i]-1;
+                    mensagemDecodificada.Append(letras[l]);
+                }
+                Console.Write("{0}\n", mensagemDecodificada);
             }
         }
 
@@ -28,6 +37,7 @@ namespace ExerciciosMatematica.ex1585
         {
             return int.Parse(LerLinha());
         }
+
 
         private string LerLinha()
         {
@@ -37,9 +47,6 @@ namespace ExerciciosMatematica.ex1585
         private int[] LerMultiplasEntradas(int entradas)
         {
             var entrada = LerLinha();
-           
-            if (string.IsNullOrEmpty(entrada))
-                return null;
 
             int[] valores = new int[entradas];
             var entradaArray = entrada.Split(' ');

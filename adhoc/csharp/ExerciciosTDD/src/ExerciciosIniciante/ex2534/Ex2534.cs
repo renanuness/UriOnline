@@ -1,26 +1,42 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-namespace ExerciciosMatematica.ex1585
+namespace ExerciciosIniciante.Exercicio2534
 {
     public class URI
     {
         static void Main(string[] args)
         {
-            var ex = new Ex1585();
+            var ex = new Ex2534();
             ex.Executar();
         }
     }
 
-    public class Ex1585
+    public class Ex2534
     {
         public void Executar()
         {
-            var casos = LerInteiro();
-            while(casos-- > 0)
+            int[] entradas;
+            while ((entradas = LerMultiplasEntradas(2)) != null)
             {
-                var entradas = LerMultiplasEntradas(2);
-                var resultado = (entradas[0] * entradas[1]) / 2;
-                Console.Write("{0} cm2\n", resultado);
+                var numeroHabitantes = entradas[0];
+                var numeroConsultas = entradas[1];
+
+                List<int> notas = new List<int>();
+                for (int i = 0; i < numeroHabitantes; i++)
+                {
+                    notas.Add(LerInteiro());
+                }
+
+                notas = notas.OrderByDescending(x => x).ToList(); ;
+
+                for (int i = 0; i < numeroConsultas; i++)
+                {
+                    var posicao = LerInteiro();
+                    Console.Write("{0}\n", notas[posicao-1]);
+                }
             }
         }
 
@@ -37,7 +53,7 @@ namespace ExerciciosMatematica.ex1585
         private int[] LerMultiplasEntradas(int entradas)
         {
             var entrada = LerLinha();
-           
+
             if (string.IsNullOrEmpty(entrada))
                 return null;
 

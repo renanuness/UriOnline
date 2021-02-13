@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ExerciciosStrings.ex1768
+namespace ExerciciosStrings.Exercicio1768
 {
     public class URI
     {
@@ -23,19 +23,37 @@ namespace ExerciciosStrings.ex1768
             {
                 var entrada = LerLinha();
 
-                if (entrada == "")
+                if (string.IsNullOrEmpty(entrada))
                     return;
 
                 TamanhoArvore = LerInteiro(entrada);
-                ImprimirArvore();
+                if (TamanhoArvore == 2)
+                    ImprimirArvoreAna();
+                else
+                    ImprimirArvore();
+
+                QuebrarLinha();
             }
+        }
+
+        private void ImprimirArvoreAna()
+        {
+            ImprimirEspacoEmBranco(1);
+            ImprimirAsteriscos(1);
+            QuebrarLinha();
+            ImprimirEspacoEmBranco(1);
+            ImprimirAsteriscos(1);
+            QuebrarLinha();
+            ImprimirAsteriscos(3);
+            QuebrarLinha();
         }
 
         private void ImprimirArvore()
         {
-            for(int i = 1; i <= TamanhoArvore; i+=2)
+            for (int i = 1; i <= TamanhoArvore; i += 2)
             {
                 var espacosEmBranco = (TamanhoArvore - i) / 2;
+
                 ImprimirEspacoEmBranco(espacosEmBranco);
                 ImprimirAsteriscos(i);
                 QuebrarLinha();
@@ -53,7 +71,7 @@ namespace ExerciciosStrings.ex1768
 
         private void ImprimirEspacoEmBranco(int quantiade)
         {
-            for(int i = 0; i < quantiade; i++)
+            for (int i = 0; i < quantiade; i++)
             {
                 Console.Write(" ");
             }
@@ -61,7 +79,7 @@ namespace ExerciciosStrings.ex1768
 
         private void ImprimirPe()
         {
-            ImprimirEspacoEmBranco((TamanhoArvore-1) / 2);
+            ImprimirEspacoEmBranco((TamanhoArvore - 1) / 2);
             ImprimirAsteriscos(1);
             QuebrarLinha();
             ImprimirEspacoEmBranco((TamanhoArvore - 3) / 2);
