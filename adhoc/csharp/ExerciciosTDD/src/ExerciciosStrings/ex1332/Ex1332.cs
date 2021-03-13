@@ -62,6 +62,5 @@ namespace ExerciciosStrings.Exercicio1332
         {
             return Console.ReadLine();
         }
-
     }
 }
